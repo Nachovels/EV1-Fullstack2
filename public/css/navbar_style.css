@@ -59,6 +59,9 @@ nav ul li a:hover {
 
 .spacer {
     height: 1500px; /* Para crear espacio y permitir el scroll */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 /* Estilos para la navbar sólida */
@@ -115,11 +118,9 @@ nav.solid .logo {
 /* Estilos para el carrusel */
 .carousel {
     position: relative;
-    width: 1800px;
     max-width: 100%;
     margin: 200px auto 40px auto; /* Espacio debajo de la navbar */
     overflow: hidden;
-    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
@@ -161,5 +162,23 @@ nav.solid .logo {
     right: 10px;
 }
 
+.card{
+    width: 20rem;
+    border-radius: 0.5rem;
+    border-color: #122c34;
+    flex: 1 0 21%;
+}
 
+.boton{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5rem;
+    border-style: solid;
+    padding: 16px 32px;
+    background-color: #122c34;
+    color: white;
+    border-color: #122c34;
+}
 
+.boton:hover{
+    transform: scale(1.1);
+}
