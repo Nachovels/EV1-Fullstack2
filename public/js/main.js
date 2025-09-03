@@ -1,8 +1,7 @@
-
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     
-    if (window.scrollY > 100) {
+    if (window.scrollY > 80) {
         navbar.classList.add('solid');
     } else {
         navbar.classList.remove('solid');
@@ -53,4 +52,28 @@ document.addEventListener('DOMContentLoaded', function() {
     if (images.length > 0) {
         showImage(current);
     }
+
+
+    document.querySelectorAll('.card-img').forEach(img => {
+        const originalSrc = img.src;
+        const hoverSrc = img.getAttribute('data-hover');
+        if (!hoverSrc) return;
+
+        img.addEventListener('mouseenter', () => {
+            img.classList.add('fade');
+            setTimeout(() => {
+                img.src = hoverSrc;
+                img.classList.remove('fade');
+            }, 200); // Espera para la animación
+        });
+
+        img.addEventListener('mouseleave', () => {
+            img.classList.add('fade');
+            setTimeout(() => {
+                img.src = originalSrc;
+                img.classList.remove('fade');
+            }, 200);
+        });
+    });
 });
+

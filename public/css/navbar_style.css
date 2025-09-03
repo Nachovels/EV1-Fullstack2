@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-
-=======
 /* Estilos generales */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f1f2eb;
+    background-color: white;
 }
 
 header {
@@ -15,11 +11,11 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-<<<<<<< HEAD
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
-=======
     transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; /* Transición de fondo, sombra y altura */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
+}
+
+h1{
+    color: #122c34;
 }
 
 nav {
@@ -30,19 +26,6 @@ nav {
     height: 150px;
     background-color: transparent;
     transition: background-color 0.15s ease, height 0.15s ease;
-<<<<<<< HEAD
-    padding: 0 20px;
-}
-
-nav.solid {
-    background-color: #122c34;
-    color: white;
-    height: 60px;
-}
-
-nav ul {
-    margin: 0 auto;
-=======
 }
 
 nav.solid {
@@ -53,66 +36,10 @@ nav.solid {
 
 nav ul {
     margin: 0 auto; /* Centra el menú horizontalmente */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
     padding: 0;
     list-style: none;
     display: flex;
     gap: 20px;
-<<<<<<< HEAD
-    transition: color 0.3s ease;
-}
-
-nav ul li a {
-    color: #122c34;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #8f95d3;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    z-index: 1001;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: #122c34;
-    margin: 3px 0;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-nav.solid .hamburger span {
-    background-color: white;
-}
-
-
-.content {
-    margin-top: 100px;
-=======
     transition: color 0.3s ease; /* Transición para los enlaces */
 }
 
@@ -128,32 +55,13 @@ nav ul li a:hover {
 }
 
 /* Estilos para la sección de contenido */
-.content {
-    margin-top: 100px; /* Más espacio al inicio debido a la navbar más grande */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
+.content { /* Más espacio al inicio debido a la navbar más grande */
     text-align: center;
-    padding: 100px 20px;
 }
 
 .spacer {
-<<<<<<< HEAD
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
-}
-
-
-nav.solid ul li a {
-    color: white;
-}
-
-nav.solid ul li a:hover {
-    color: #8f95d3;
-=======
-    height: 1500px; /* Para crear espacio y permitir el scroll */
+    margin-top: 100px; /* Espacio para la navbar */
+    height: 500px; /* Para crear espacio y permitir el scroll */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -166,19 +74,15 @@ nav.solid ul li a {
 
 nav.solid ul li a:hover {
     color: #8f95d3; /* Color al pasar el mouse */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
 }
 
 .logo {
     position: absolute;
-<<<<<<< HEAD
-    left: 50px;
-=======
     left: 500px; /* Separación desde el borde izquierdo */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
     height: 70px;
     transition: height 0.3s ease;
 }
+
 
 .search-bar {
     position: absolute;
@@ -191,18 +95,10 @@ nav.solid ul li a:hover {
 }
 
 .search-bar input {
-<<<<<<< HEAD
-    padding: 10px 50px;
-    border: 1px solid #ccc;
-    border-radius: 20px 0 0 20px;
-    outline: none;
-    min-width: 200px;
-=======
     padding: 10px 200px;
     border: 1px solid #ccc;
     border-radius: 20px 0 0 20px;
     outline: none;
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
 }
 
 .search-bar button {
@@ -220,16 +116,6 @@ nav.solid .search-bar {
 }
 
 nav.solid .logo {
-<<<<<<< HEAD
-    height: 50px;
-}
-
-
-.carousel {
-    position: relative;
-    max-width: 100%;
-    margin: 200px auto 40px auto;
-=======
     height: 50px; /* Reduce el tamaño del logo cuando la navbar es sólida */
 }
 
@@ -238,19 +124,19 @@ nav.solid .logo {
     position: relative;
     max-width: 100%;
     margin: 200px auto 40px auto; /* Espacio debajo de la navbar */
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .carousel-images img {
-    width: 100%;
+    width: 120rem;
+    height: 30rem;
     opacity: 0;
     visibility: hidden;
     position: absolute;
     left: 0;
     top: 0;
-    transition: linear 0.5s;
+    transition: ease-in-out 0.5s;
 }
 
 .carousel-images img.active {
@@ -281,128 +167,94 @@ nav.solid .logo {
     right: 10px;
 }
 
-.card{
+.card {
     width: 20rem;
     border-radius: 0.5rem;
     border-color: #122c34;
     flex: 1 0 21%;
-<<<<<<< HEAD
-    margin: 10px;
-=======
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 420px; /* Ajusta según lo que necesites */
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.card img {
+    width: 18rem;
+    height: 15rem;         /* <-- Agrega un alto fijo */
+    object-fit: contain;   /* Mostrar imagen completa */
+    background: #fff;      /* Fondo blanco para imágenes más pequeñas */
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    transition: opacity 0.4s ease;
+}
+
+.card h4, .card p {
+    margin: 0.5rem 0;
+}
+
+
+
+.card .boton {
+    margin-top: auto; /* Empuja el botón al fondo */
 }
 
 .boton{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 5rem;
     border-style: solid;
-    padding: 16px 32px;
+    padding: 14px 28px;
     background-color: #122c34;
     color: white;
     border-color: #122c34;
+    font-size: 15px;
 }
 
 .boton:hover{
     transform: scale(1.1);
 }
-<<<<<<< HEAD
 
-/* RESPONSHIVE*/
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 60px;
-        flex-direction: column;
-        background-color: #122c34;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        padding: 20px 0;
-    }
-    
-    .nav-menu.active {
-        left: 0;
-    }
-    
-    .nav-menu li {
-        margin: 15px 0;
-    }
-    
-    .nav-menu li a {
-        color: white;
-        font-size: 20px;
-    }
-    
-    nav {
-        height: 80px;
-        justify-content: space-between;
-    }
-    
-    nav.solid {
-        height: 60px;
-    }
-    
-    .logo {
-        left: 20px;
-        height: 50px;
-    }
-    
-    nav.solid .logo {
-        height: 40px;
-    }
-    
-    .search-bar {
-        display: none;
-    }
-    
-    .carousel {
-        margin-top: 100px;
-    }
-    
-    .content {
-        margin-top: 20px;
-        padding: 50px 10px;
-    }
-    
-    .spacer {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .card {
-        width: 90%;
-        max-width: 300px;
-        flex: none;
-    }
+.titulos{
+    margin-top: 50px;
+    color: #122c34;
 }
 
-@media screen and (max-width: 480px) {
-    .logo {
-        height: 40px;
-    }
-    
-    nav.solid .logo {
-        height: 35px;
-    }
-    
-    .carousel-btn {
-        font-size: 1.5rem;
-        padding: 0 10px;
-    }
-    
-    .card {
-        width: 95%;
-    }
-    
-    .nav-menu li a {
-        font-size: 18px;
-    }
+.separador{
+    margin-top: 50px;
+    border: 2px solid #122c34;
+    width: 90%;
+    opacity: 0.5;
 }
-=======
->>>>>>> a6a88ba27f3e30de5a7d7551bc0cd15cabde03e1
+
+.oferta{
+    color: red;
+}
+
+.card-img {
+    transition: opacity 0.4s ease;
+}
+.card-img.fade {
+    opacity: 0.2;
+}
+
+footer{
+    background-color: #122c34;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+footer h3{
+    text-align: right;
+    margin-right: 135px;
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 1650px;
+}
