@@ -41,6 +41,11 @@ nav ul {
     display: flex;
     gap: 20px;
     transition: color 0.3s ease; /* Transición para los enlaces */
+    max-width: 90vw;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 nav ul li a {
@@ -257,4 +262,247 @@ footer ul {
     list-style-type: none;
     text-align: left;
     margin-left: 1650px;
+}
+
+/* Limita el ancho del menú y evita desbordes */
+nav ul {
+    max-width: 90vw;
+    overflow-x: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Corrige el color de los enlaces cuando la navbar es sólida */
+#navbar.solid ul li a {
+    color: white !important;
+}
+
+#navbar.solid ul li a:hover {
+    color: #8f95d3 !important;
+}
+
+/* Limita el ancho del menú y ajusta el espaciado */
+.nav-menu {
+    max-width: 95vw;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 0 10px;
+}
+
+/* Estilos para el botón hamburguesa alineado a la derecha */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background: #122c34;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+.hamburger.active span {
+    background: #8f95d3;
+}
+
+/* Oculta el menú en pantallas pequeñas y lo muestra con el botón */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+    }
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        height: 100vh;
+        background: #122c34;
+        padding: 60px 0 0 0;
+        z-index: 1000;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+        align-items: flex-start;
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+        /* Oculta el menú por defecto */
+    }
+    .nav-menu.active {
+        transform: translateX(0);
+    }
+    .nav-menu li {
+        width: 100%;
+    }
+    .nav-menu li a {
+        color: white;
+        font-size: 18px;
+        padding: 16px 24px;
+        border-bottom: 1px solid #8f95d3;
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+    .nav-menu li a:hover {
+        color: #8f95d3;
+        background: none;
+    }
+}
+
+/* Ajusta el tamaño de fuente en pantallas pequeñas */
+@media (max-width: 900px) {
+    .nav-menu li a {
+        font-size: 16px;
+        word-break: break-word;
+        text-align: center;
+    }
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1200px) {
+    .spacer {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        height: auto;
+    }
+    .card {
+        min-width: 260px;
+        max-width: 350px;
+        margin: 10px;
+        flex: 1 1 40%;
+    }
+    .logo {
+        left: 20px;
+        height: 60px;
+        position: static;
+        margin-right: 20px;
+    }
+    .search-bar input {
+        padding: 10px 80px;
+    }
+    footer ul {
+        margin-left: 0;
+        text-align: center;
+    }
+    footer h3 {
+        text-align: center;
+        margin-right: 0;
+    }
+    .carousel-images img {
+        width: 100vw;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px 0;
+    }
+    .logo {
+        margin-bottom: 10px;
+        margin-top: 35px;
+        height: 50px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+    }
+    .search-bar {
+        position: fixed;
+        margin-bottom: 10px;
+        width: 90vw;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+    .spacer {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-top: 40px;
+    }
+    .card {
+        width: 90vw;
+        min-width: 200px;
+        max-width: 400px;
+    }
+    .carousel-images img {
+        width: 100vw;
+        height: 15rem;
+    }
+    .titulos {
+        font-size: 1.5rem;
+    }
+    .separador {
+        width: 98%;
+    }
+    footer ul {
+        margin-left: 0;
+        text-align: center;
+    }
+    footer h3 {
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .logo {
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .search-bar input {
+        padding: 8px 30px;
+        font-size: 14px;
+    }
+    .carousel-images img {
+        width: 100vw;
+        height: 10rem;
+    }
+    .card {
+        width: 98vw;
+        min-width: 150px;
+        max-width: 350px;
+        padding: 0.5rem;
+    }
+    .titulos {
+        font-size: 1.2rem;
+    }
+    .separador {
+        width: 100%;
+    }
+    footer {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
 }
