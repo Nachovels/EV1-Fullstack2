@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - TCG Shop</title>
+    <link rel="stylesheet" href="public/css/navbar_style.css">
+    <link rel="stylesheet" href="public/css/carrito_style.css">
+    <script src="public/js/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit"><img src="public/img/search.png" alt="" width="10px"></button>
+            </form>
+            <img src="https://static.wixstatic.com/media/cc32b2_4cd9801bbc844d7f9fce1e92f80fa270~mv2.png" alt=""
+                class="logo">
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="carrito.html" class="active-link">
+                    Carrito <span id="cart-count" class="cart-count">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-main">
+        <section class="cart-section">
+            <div class="cart-container">
+                <h1>Tu Carrito de Compras</h1>
+                
+                <div id="cart-empty" class="cart-empty">
+                    <div class="empty-icon">🛒</div>
+                    <h3>Tu carrito está vacío</h3>
+                    <p>Agrega algunos productos para comenzar tu compra</p>
+                    <a href="index.html" class="continue-shopping">Seguir comprando</a>
+                </div>
+
+                <div id="cart-content" class="cart-content" style="display: none;">
+                    <div class="cart-items" id="cart-items">
+                        <!-- Los items del carrito se generarán dinámicamente aquí -->
+                    </div>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Envío:</span>
+                            <span id="shipping">$2.990</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">$0</span>
+                        </div>
+                        
+                        <button class="checkout-btn" id="checkout-btn">Proceder al Pago</button>
+                        <a href="index.html" class="continue-shopping">Seguir comprando</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Contacto</h3>
+        <ul>
+            <li>Teléfono: +569 123 456 89</li>
+            <li>Correo: tcg@contacto.cl</li>
+            <li>Dirección: Álvarez 1136</li>
+        </ul>
+    </footer>
+
+    <script defer src="public/js/carrito.js"></script>
+</body>
+
+</html>

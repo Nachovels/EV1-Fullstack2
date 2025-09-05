@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TCG Shop</title>
+    <link rel="stylesheet" href="public/css/navbar_style.css">
+    <link rel="stylesheet" href="public/css/login_style.css">
+    <script src="public/js/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <form class="search-bar">
+                <input type="text" placeholder="Buscar...">
+                <button type="submit"><img src="public/img/search.png" alt="" width="10px"></button>
+            </form>
+            <img src="https://static.wixstatic.com/media/cc32b2_4cd9801bbc844d7f9fce1e92f80fa270~mv2.png" alt=""
+                class="logo">
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" class="active-link">Login</a></li>
+                <li><a href="carrito.html">
+                    Carrito <span id="cart-count" class="cart-count" style="display: none;">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-main">
+        <section class="login-section">
+            <div class="login-container">
+                <div class="login-header">
+                    <h1>Iniciar Sesión</h1>
+                    <p>Accede a tu cuenta para una experiencia personalizada</p>
+                </div>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" required>
+                            <button type="button" class="toggle-password" id="togglePassword">
+                                <span class="eye-icon">👁️</span>
+                            </button>
+                        </div>
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span class="checkmark"></span>
+                            Recordarme
+                        </label>
+                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Iniciar Sesión</button>
+                </form>
+                
+                <div class="divider">
+                    <span>o</span>
+                </div>
+                
+                <div class="demo-section">
+                    <h3>Cuentas de Demostración</h3>
+                    <p>Utiliza estas credenciales para probar la funcionalidad:</p>
+                    
+                    <div class="demo-accounts">
+                        <div class="demo-account">
+                            <h4>Usuario Normal</h4>
+                            <p><strong>Email:</strong> usuario@demo.com</p>
+                            <p><strong>Contraseña:</strong> demo123</p>
+                            <button type="button" class="demo-btn" onclick="fillDemoData('user')">
+                                Usar estas credenciales
+                            </button>
+                        </div>
+                        
+                        <div class="demo-account">
+                            <h4>Administrador</h4>
+                            <p><strong>Email:</strong> admin@demo.com</p>
+                            <p><strong>Contraseña:</strong> admin123</p>
+                            <button type="button" class="demo-btn" onclick="fillDemoData('admin')">
+                                Usar estas credenciales
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="signup-link">
+                    <p>¿No tienes una cuenta? <a href="#" onclick="showComingSoon()">Crear cuenta</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Contacto</h3>
+        <ul>
+            <li>Teléfono: +569 123 456 89</li>
+            <li>Correo: tcg@contacto.cl</li>
+            <li>Dirección: Álvarez 1136</li>
+        </ul>
+    </footer>
+
+    <script defer src="public/js/login.js"></script>
+    <script defer src="public/js/carrito.js"></script>
+</body>
+
+</html>
