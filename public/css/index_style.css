@@ -11,7 +11,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; /* Transición de fondo, sombra y altura */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, height 0.3s ease;
 }
 
 h1{
@@ -29,18 +29,18 @@ nav {
 }
 
 nav.solid {
-    background-color: #122c34; /* Fondo sólido cuando se hace scroll */
+    background-color: #122c34;
     color: white;
-    height: 60px; /* Más pequeño cuando se vuelve sólido */
+    height: 60px;
 }
 
 nav ul {
-    margin: 0 auto; /* Centra el menú horizontalmente */
+    margin: 0 auto;
     padding: 0;
     list-style: none;
     display: flex;
     gap: 20px;
-    transition: color 0.3s ease; /* Transición para los enlaces */
+    transition: color 0.3s ease; 
     max-width: 90vw;
     overflow-x: auto;
     flex-wrap: wrap;
@@ -49,41 +49,49 @@ nav ul {
 }
 
 nav ul li a {
-    color: #122c34; /* Color inicial de los enlaces */
+    color: #122c34; 
     text-decoration: none;
     font-size: 18px;
-    transition: color 0.3s ease; /* Transición para el color del texto */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #8f95d3; /* Color al pasar el mouse */
+    color: #8f95d3;
 }
 
-/* Estilos para la sección de contenido */
-.content { /* Más espacio al inicio debido a la navbar más grande */
+
+.content {
     text-align: center;
 }
 
 .spacer {
-    margin-top: 100px; /* Espacio para la navbar */
-    height: 500px; /* Para crear espacio y permitir el scroll */
+    margin-top: 100px; 
+    height: 500px; 
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-/* Estilos para la navbar sólida */
+.spacer a {
+    display: flex;
+    flex: 1 0 21%;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+
 nav.solid ul li a {
-    color: white; /* Cambia el color de los enlaces cuando la navbar es sólida */
+    color: white;
 }
 
 nav.solid ul li a:hover {
-    color: #8f95d3; /* Color al pasar el mouse */
+    color: #8f95d3; 
 }
 
 .logo {
     position: absolute;
-    left: 500px; /* Separación desde el borde izquierdo */
+    left: 500px; 
     height: 70px;
     transition: height 0.3s ease;
 }
@@ -121,14 +129,14 @@ nav.solid .search-bar {
 }
 
 nav.solid .logo {
-    height: 50px; /* Reduce el tamaño del logo cuando la navbar es sólida */
+    height: 50px; 
 }
 
-/* Estilos para el carrusel */
+
 .carousel {
     position: relative;
     max-width: 100%;
-    margin: 200px auto 40px auto; /* Espacio debajo de la navbar */
+    margin: 200px auto 40px auto; 
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -180,16 +188,16 @@ nav.solid .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 420px; /* Ajusta según lo que necesites */
+    min-height: 420px; 
     box-sizing: border-box;
     padding: 1rem;
 }
 
 .card img {
     width: 18rem;
-    height: 15rem;         /* <-- Agrega un alto fijo */
-    object-fit: contain;   /* Mostrar imagen completa */
-    background: #fff;      /* Fondo blanco para imágenes más pequeñas */
+    height: 15rem;      
+    object-fit: contain;  
+    background: #fff;   
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     transition: opacity 0.4s ease;
@@ -202,7 +210,7 @@ nav.solid .logo {
 
 
 .card .boton {
-    margin-top: auto; /* Empuja el botón al fondo */
+    margin-top: auto;
 }
 
 .boton{
@@ -266,7 +274,7 @@ footer ul {
     margin-left: 1650px;
 }
 
-/* Limita el ancho del menú y evita desbordes */
+
 nav ul {
     max-width: 90vw;
     overflow-x: auto;
@@ -275,7 +283,7 @@ nav ul {
     box-sizing: border-box;
 }
 
-/* Corrige el color de los enlaces cuando la navbar es sólida */
+
 #navbar.solid ul li a {
     color: white !important;
 }
@@ -284,7 +292,7 @@ nav ul {
     color: #8f95d3 !important;
 }
 
-/* Limita el ancho del menú y ajusta el espaciado */
+
 .nav-menu {
     max-width: 95vw;
     box-sizing: border-box;
@@ -294,7 +302,7 @@ nav ul {
     padding: 0 10px;
 }
 
-/* Estilos para el botón hamburguesa alineado a la derecha */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -322,8 +330,8 @@ nav ul {
 }
 
 a {
-  text-decoration: none; /* Quita el subrayado */
-  color: inherit;         /* Hereda el color del texto de su contenedor */
+  text-decoration: none; 
+  color: inherit;         
 }
 
 .producto img{
@@ -364,7 +372,7 @@ a {
     transform: scale(1.1);
 }
 
-/* Oculta el menú en pantallas pequeñas y lo muestra con el botón */
+
 @media (max-width: 900px) {
     .hamburger {
         display: flex;
@@ -384,7 +392,7 @@ a {
         align-items: flex-start;
         transform: translateX(100%);
         transition: transform 0.4s cubic-bezier(.77,0,.18,1);
-        /* Oculta el menú por defecto */
+        
     }
     .nav-menu.active {
         transform: translateX(0);
@@ -407,7 +415,7 @@ a {
     }
 }
 
-/* Ajusta el tamaño de fuente en pantallas pequeñas */
+
 @media (max-width: 900px) {
     .nav-menu li a {
         font-size: 16px;
@@ -416,7 +424,7 @@ a {
     }
 }
 
-/* --- RESPONSIVE DESIGN --- */
+
 @media (max-width: 1200px) {
     .spacer {
         flex-wrap: wrap;
@@ -552,7 +560,7 @@ a {
     }
 }
 
-/* --- RESPONSIVE PRODUCTO --- */
+
 @media (max-width: 1200px) {
     .producto img {
         width: 400px;

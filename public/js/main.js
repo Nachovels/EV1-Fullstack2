@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 img.src = hoverSrc;
                 img.classList.remove('fade');
-            }, 200); // Espera para la animación
+            }, 200); 
         });
 
         img.addEventListener('mouseleave', () => {
