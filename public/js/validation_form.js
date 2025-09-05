@@ -175,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Función para mostrar popup de éxito
     function mostrarPopupExito() {
-        // Crear el popup
         const popup = document.createElement('div');
         popup.className = 'success-popup';
         popup.innerHTML = `
